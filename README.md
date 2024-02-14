@@ -3,6 +3,6 @@
 Project 1
 
 - Create an S3 bucket
-- Create an EC2 te.micro server with Debian
+- Create an EC2 t2.micro server with Debian
 - Create the infrastructure with Security groups and VPC
     - Create an Apache server that runs a web server and publishes Ola Mundo
