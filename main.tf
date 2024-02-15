@@ -39,20 +39,11 @@ resource "aws_security_group" "example" {
   }
 }
 
-# Criação da Chave de Acesso
+# Criação da Chave de Acesso# Criação da Chave de Acesso SSH
 #resource "aws_key_pair" "example" {
-# key_name   = "my-key-pair"
-#  public_key = file("~/.ssh/id_rsa.pub")  # Caminho para a chave pública SSH
+#  key_name   = "EC2-key-pair"  # Nome da chave de acesso SSH
+#  public_key = file("~/.ssh/id_rsa_ec2.pub")  # Caminho para a chave pública SSH
 #}
 
 # Criação da Instância EC2
-resource "aws_instance" "example" {
-  ami             = "ami-0eb11ab33f229b26c"  # ID da AMI do Ubuntu 20.04 LTS
-  instance_type   = "t2.micro"
-  subnet_id       = "subnet-0db3d811d5e387954"
-  #key_name        = aws_key_pair.example.key_name
-  security_groups = ["sg-014b02f43f6067891","sg-05a76e559edc78159"]
-}
-resource "aws_s3_bucket" "sergio_bucket" {
-  bucket = "my-tf-test-bucketsergio"
-}
+
